@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Fonts ---- */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jbmono);
+
+  /* ---- Monochrome Pro base scale ---- */
+  --color-mono-50: #F8FAFC;
+  --color-mono-100: #F1F5F9;
+  --color-mono-200: #E2E8F0;
+  --color-mono-300: #CBD5E1;
+  --color-mono-400: #94A3B8;
+  --color-mono-500: #64748B;
+  --color-mono-600: #475569;
+  --color-mono-700: #334155;
+  --color-mono-800: #1E293B;
+  --color-mono-900: #0F172A;
+
+  /* ---- Semantic tokens ---- */
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #475569;
+
+  /* ---- Status colors ---- */
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --color-info: #475569;
+
+  /* ---- Radius ---- */
+  --radius-card: 12px;
+  --radius-control: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #0F172A;
+    --color-surface: #1E293B;
+    --color-border: #334155;
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-muted: #263449;
+    --color-muted-foreground: #CBD5E1;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}

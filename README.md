@@ -1,205 +1,158 @@
-# 🤖 AI Agentic Developer
+# 🤖 AI Agentic Developer Platform
 
-An intelligent AI-powered developer assistant designed to help developers automate coding tasks, analyze problems, generate solutions, and improve software development workflows using Agentic AI capabilities.
+A modern Full Stack AI-powered Developer Workspace built with **Next.js**, **Node.js**, **Express.js**, **MongoDB**, and **Groq AI**.
 
-## 🚀 Overview
-
-AI Agentic Developer is an AI-based system that works like a virtual software engineering assistant. It combines Large Language Models (LLMs), automation workflows, and backend services to assist developers in writing, debugging, analyzing, and improving code.
-
-The goal of this project is to build an intelligent AI agent that can understand developer requirements, reason about problems, and provide useful solutions similar to a real development assistant.
+This platform helps developers manage projects, tasks, team collaboration, notes, GitHub repositories, and interact with AI assistants from a single dashboard.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-### 🧠 AI-Powered Assistance
-- Understands natural language developer queries
-- Generates programming solutions
-- Provides explanations and suggestions
-- Helps with debugging and optimization
+### 🔐 Authentication
+- User Registration
+- User Login
+- JWT Authentication
+- Secure Password Hashing (bcrypt)
 
-### 🤖 Agentic Workflow
-- Task understanding
-- Reasoning and decision-making
-- Automated response generation
-- Multi-step problem solving
+### 📁 Project Management
+- Create Projects
+- View Projects
+- Update Projects
+- Delete Projects
 
-### 💻 Developer Support
-- Code generation
-- Error analysis
-- Technical guidance
-- Software development assistance
+### ✅ Task Management
+- Create Tasks
+- Track Task Status
+- Update Tasks
+- Delete Tasks
 
-### ⚡ Backend Services
-- Scalable API architecture
-- Secure environment configuration
-- AI model integration
-- Efficient request handling
+### 📝 Notes Management
+- Create Notes
+- Save Notes
+- Delete Notes
 
----
+### 👥 Team Management
+- Invite Team Members
+- Store Team Information
+- Online / Offline Status
+- Delete Members
 
-## 🏗️ System Architecture
+### 🤖 AI Assistant
+- Chat with AI
+- Powered by Groq LLM
+- Instant AI Responses
 
-```
+### 💬 Team Chat
+- AI Chat Interface
+- Real-time Ready UI
+- Backend Connected
 
-User
-|
-|  Request
-↓
-Frontend Interface
-|
-↓
-Backend API
-|
-↓
-AI Agent Layer
-|
-↓
-LLM Model
-|
-↓
-Response Generation
-|
-↓
-User Output
-
-```
+### 🐙 GitHub Integration
+- Fetch GitHub Repositories
+- GitHub API Integration
+- Repository Viewer
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-### Backend
-- Node.js
-- Express.js
-- REST APIs
-- MongoDB
+## Frontend
 
-### AI Integration
-- Large Language Models (LLMs)
-- Prompt Engineering
-- AI Agent Workflows
-
-### Frontend
-- Next.js
-- React
+- Next.js 14
+- React 18
 - TypeScript
 - Tailwind CSS
+- Lucide React
 
-### Tools & Libraries
-- Git & GitHub
-- VS Code
-- Environment Variables
-- API Integration
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- Bcrypt
+- Axios
+
+## AI
+
+- Groq API
+- Llama Models
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
-
-AI-Agentic-Developer/
+ai-agentic-developer
 │
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   ├── models/
-│   │   ├── services/
-│   │   ├── utils/
-│   │   └── server.js
-│   │
-│   └── package.json
+├── app
+│   ├── assistant
+│   ├── chat
+│   ├── github
+│   ├── notes
+│   ├── projects
+│   ├── tasks
+│   ├── team
+│   └── auth
 │
-├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── lib/
-│   ├── public/
-│   └── package.json
+├── backend
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── services
+│   └── server.js
 │
-├── README.md
-└── .env.example
-
-````
+├── components
+├── lib
+├── public
+└── types
+```
 
 ---
 
-# ⚙️ Installation & Setup
+# ⚡ Installation
 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Agentic-Developer.git
+git clone https://github.com/yourusername/ai-agentic-developer.git
+```
 
-cd AI-Agentic-Developer
-````
+Go inside the project
+
+```bash
+cd ai-agentic-developer
+```
 
 ---
 
-# Backend Setup
+## Frontend
 
-Navigate to backend:
-
-```bash
-cd backend
-```
-
-Install dependencies:
+Install packages
 
 ```bash
 npm install
 ```
 
-Create `.env` file:
+Create
 
 ```
-PORT=5000
-MONGODB_URI=your_mongodb_connection
-AI_API_KEY=your_api_key
+.env.local
 ```
 
-Run backend:
-
-```bash
-npm run dev
-```
-
-Server will start on:
-
-```
-http://localhost:5000
-```
-
----
-
-# Frontend Setup
-
-Navigate to frontend:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create environment file:
-
-```
+```env
 NEXT_PUBLIC_API_URL=http://localhost:5000
 ```
 
-Run frontend:
+Run
 
 ```bash
 npm run dev
 ```
 
-Application will run on:
+Frontend runs on
 
 ```
 http://localhost:3000
@@ -207,60 +160,153 @@ http://localhost:3000
 
 ---
 
-# 🔐 Environment Variables
+## Backend
 
-The project requires environment variables for:
+Go to backend
 
-* Database connection
-* AI model API keys
-* Server configuration
-* Frontend API URLs
+```bash
+cd backend
+```
 
-Never expose secret keys publicly.
+Install packages
+
+```bash
+npm install
+```
+
+Create
+
+```
+.env
+```
+
+```env
+PORT=5000
+
+MONGO_URI=YOUR_MONGODB_URI
+
+JWT_SECRET=YOUR_SECRET
+
+GROQ_API_KEY=YOUR_GROQ_API_KEY
+
+GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+```
+
+Run
+
+```bash
+npm run dev
+```
+
+Backend runs on
+
+```
+http://localhost:5000
+```
 
 ---
 
-# 🎯 Use Cases
+# 📡 API Endpoints
 
-* AI Coding Assistant
-* Developer Productivity Tool
-* Automated Code Review
-* Debugging Assistant
-* Software Engineering Support
-* Learning Assistant for Developers
+## Authentication
+
+```
+POST /api/auth/register
+POST /api/auth/login
+```
+
+## Projects
+
+```
+GET /api/projects
+POST /api/projects
+PUT /api/projects/:id
+DELETE /api/projects/:id
+```
+
+## Tasks
+
+```
+GET /api/tasks
+POST /api/tasks
+PUT /api/tasks/:id
+DELETE /api/tasks/:id
+```
+
+## Notes
+
+```
+GET /api/notes
+POST /api/notes
+DELETE /api/notes/:id
+```
+
+## Team
+
+```
+GET /api/team
+POST /api/team
+DELETE /api/team/:id
+```
+
+## AI Chat
+
+```
+POST /api/chat
+```
+
+## GitHub
+
+```
+GET /api/github/repos
+```
+
+---
+
+# ✨ Current Modules
+
+- ✅ Authentication
+- ✅ Projects CRUD
+- ✅ Tasks CRUD
+- ✅ Notes CRUD
+- ✅ Team CRUD
+- ✅ AI Chat Assistant
+- ✅ GitHub Integration
+- ✅ Responsive Dashboard
 
 ---
 
 # 🔮 Future Improvements
 
-* Multi-agent collaboration system
-* Code execution environment
-* Repository analysis agent
-* Automated testing agent
-* Memory-based AI assistant
-* Cloud deployment
+- Google Authentication
+- GitHub OAuth
+- File Uploads
+- AI Code Generation
+- Real-time Team Chat
+- Notifications
+- Calendar
+- AI Task Planner
+- Dark / Light Theme
+- Docker Deployment
 
 ---
 
-# 👩‍💻 Developer
+# 👨‍💻 Developed By
 
 **Mahnoor Fatima**
-AI & Backend Developer | Agentic AI Developer
 
-**Lokesh Kumar***
-Frontend Developer  | UI/UX 
+AI & Backend Developer
 
-Focused on building:
+**Lokesh Kumar**
 
-* Generative AI Applications
-* AI Agents
-* Backend Systems
-* Intelligent Automation Solutions
+Frontend Developer
 
 ---
 
 # 📜 License
 
-This project is developed for learning, experimentation, and AI research purposes.
+This project is licensed under the MIT License.
 
-```
+---
+
+
